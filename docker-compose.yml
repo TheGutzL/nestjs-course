@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: gutz
+      POSTGRES_PASSWORD: gutzpassword
+      POSTGRES_DB: nestdb
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - 5499:5432
